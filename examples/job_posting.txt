@@ -1,0 +1,26 @@
+Software Engineer, New Grad — Example Robotics Co.
+
+About the role
+You will build the software that plans routes for our warehouse robots and
+the cloud services that monitor the fleet. Our robots run ROS 2 on Linux.
+
+Requirements:
+- Strong programming skills in Python and C++
+- Experience with Linux and Git
+- Solid understanding of data structures and algorithms
+- Experience building and consuming REST APIs
+- Familiarity with Docker and CI/CD pipelines
+- Experience with AWS for deploying services
+- Clear written communication and a habit of writing automated tests
+- Comfortable debugging across the fleet, from a single robot to the cloud
+
+Nice to have:
+- Experience with ROS 2 or other robotics middleware
+- Kubernetes for running services across the fleet
+- TypeScript and React for internal dashboards
+- PostgreSQL
+
+Experience with simulation tools is a plus.
+
+Benefits:
+Health coverage, a relocation stipend, and a robotics lab you can use on weekends.
