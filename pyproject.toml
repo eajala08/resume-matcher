@@ -13,6 +13,10 @@ dependencies = []
 
 [project.scripts]
 resume-match = "resume_matcher.cli:main"
+resume-match-web = "resume_matcher.web:main"
 
 [tool.setuptools]
 packages = ["resume_matcher"]
+
+[tool.setuptools.package-data]
+resume_matcher = ["static/*"]

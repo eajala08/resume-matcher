@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume Matcher</title>
+  <meta name="description" content="Paste your resume and a job posting to see which skills the posting asks for that your resume never mentions.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Resume Matcher</h1>
+      <p class="lead">Many companies filter resumes by keyword before a person reads them. Paste your resume and a job posting to see which skills the posting asks for that your resume never mentions.</p>
+      <p class="privacy">Your text is scored in memory and is not stored or logged.</p>
+    </header>
+
+    <form id="form" novalidate>
+      <div class="inputs">
+        <div class="field">
+          <div class="field-head">
+            <label for="resume">Your resume</label>
+            <label class="link-button">Upload .txt or .md
+              <input type="file" id="resume-file" accept=".txt,.md,text/plain,text/markdown" data-target="resume">
+            </label>
+          </div>
+          <textarea id="resume" rows="16" maxlength="50000" spellcheck="false" placeholder="Paste your resume as plain text"></textarea>
+        </div>
+        <div class="field">
+          <div class="field-head">
+            <label for="job">Job posting</label>
+            <label class="link-button">Upload .txt or .md
+              <input type="file" id="job-file" accept=".txt,.md,text/plain,text/markdown" data-target="job">
+            </label>
+          </div>
+          <textarea id="job" rows="16" maxlength="50000" spellcheck="false" placeholder="Paste the job posting as plain text"></textarea>
+        </div>
+      </div>
+
+      <p id="form-error" class="error" role="alert" hidden></p>
+
+      <div class="actions">
+        <button type="submit" id="submit" class="primary">Check my match</button>
+        <button type="button" id="example" class="secondary">Try an example</button>
+        <button type="button" id="clear" class="secondary">Clear</button>
+        <span class="hint">Tip: Ctrl+Enter (Cmd+Enter on Mac) also runs the check. PDF and Word files: copy the text out first.</span>
+      </div>
+    </form>
+
+    <section id="results" aria-live="polite" hidden>
+      <h2 id="results-heading" tabindex="-1">Your match</h2>
+      <div class="score-card">
+        <div class="score" id="score"></div>
+        <div class="score-body">
+          <p class="verdict" id="verdict"></p>
+          <div class="bar" aria-hidden="true"><div class="fill" id="fill"></div></div>
+        </div>
+      </div>
+      <div id="details"></div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://github.com/eajala08/resume-matcher">Source on GitHub</a>
+    <span>It checks whether a word appears on your resume. It cannot judge how well you know it.</span>
+  </footer>
+  <script src="/app.js"></script>
+</body>
+</html>
