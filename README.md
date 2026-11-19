@@ -57,6 +57,30 @@ To use your own files, save your resume and the job posting as plain text
 | `--min-score PCT` | Exit with code 1 if the score is below PCT, useful in scripts |
 | `--no-color` | Turn off colored output |
 
+## Web page
+
+If you would rather paste text than save files, there is a small web page.
+It uses the same matcher and still needs nothing but Python.
+
+```bash
+python3 -m resume_matcher.web
+```
+
+Then open http://127.0.0.1:8000. You can paste both texts, upload `.txt` or
+`.md` files, or click "Try an example". Your text is scored in memory and is
+never stored or logged.
+
+After `pip install .` the same thing is available as `resume-match-web`
+(`--port N` to change the port).
+
+### Put it online
+
+The repo includes a [`render.yaml`](render.yaml), so on [Render](https://render.com)
+you can choose **New > Blueprint**, point it at this repo, and it will build and
+start the page on the free plan. Any host that can run
+`pip install . && resume-match-web` works too; the server listens on the
+`PORT` environment variable when one is set.
+
 ## How the score works
 
 1. **Split the posting into required and nice-to-have.** Lines under a
@@ -103,7 +127,9 @@ resume_matcher/
   matcher.py   required vs. optional sections, weights, the score
   report.py    the terminal report
   cli.py       command-line options
-tests/         34 tests, run on every push by GitHub Actions
+  web.py       the web page's server and JSON API
+  static/      the web page (HTML, CSS, JavaScript)
+tests/         43 tests, run on every push by GitHub Actions
 examples/      a sample resume and job posting
 ```
 

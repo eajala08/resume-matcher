@@ -1,0 +1,24 @@
+SAM EXAMPLE
+sam@example.com | github.com/sam-example
+
+EDUCATION
+B.S. Computer Science, State University — expected May 2027
+Coursework: Data Structures, Algorithms, Operating Systems, Databases
+
+SKILLS
+Languages: Python, Java, C++, JavaScript, SQL
+Tools: Git, Linux, Docker
+Frameworks: React, Flask, ROS 2
+
+EXPERIENCE
+Software Team Member, University Rover Team                Sep 2025 – present
+- Wrote Python and C++ nodes in ROS 2 to drive a six-wheel rover over a CAN bus
+- Led debugging of a motor controller fault that had stalled field testing for two weeks
+- Collaborated with the electrical and mechanical subteams on a shared interface document
+
+Teaching Assistant, Intro to Programming                    Jan 2025 – May 2025
+- Held weekly office hours for 40 students and wrote unit tests for the autograder
+
+PROJECTS
+Course Planner — a Flask and React web app that checks prerequisites before you enroll
+- Stored course data in SQLite and served it through a REST API
